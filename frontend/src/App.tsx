@@ -1,26 +1,22 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ContactPage from "./pages/ContactPage";
 
-import Header from "./components/header";
-import Intro from "./pages/intro";
-import AboutMe from "./pages/aboutme";
-import Projects from "./pages/projects";
-import ContactMe from "./pages/contact";
-
-function App() {
+export default function App() {
   return (
-      <Router>
-          <div className="App">
-              <Header />
-              <Routes>
-                <Route path="/" element={<Intro />} />
-                <Route path="/AboutMe" element={<AboutMe />} />
-                <Route path="/Projects" element={<Projects />} />
-                <Route path="/ContactMe" element={<ContactMe />} />
-                <Route path="*" element={<Intro />} />
-              </Routes>
-          </div>
-      </Router>
+    <div className="min-h-screen">
+      <Header />
+      <main className="pt-16">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
-
-export default App;
