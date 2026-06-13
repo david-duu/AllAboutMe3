@@ -8,22 +8,23 @@ import {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <li className="group rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 transition-colors hover:border-neutral-700 hover:bg-neutral-900">
-      <div className="flex items-start justify-between gap-2">
-        <h3 className="text-xl font-semibold text-white">{project.name}</h3>
-        <a
-          href={project.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="shrink-0 text-neutral-400 transition-colors hover:text-blue-400"
-          aria-label={`View ${project.name} on GitHub`}
-        >
-          <ArrowTopRightOnSquareIcon className="h-5 w-5" />
-        </a>
-      </div>
-      <p className="mt-3 text-sm leading-relaxed text-neutral-400">
-        {project.description}
-      </p>
+    <li>
+      <a
+        href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex h-full flex-col rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 transition-colors hover:border-neutral-700 hover:bg-neutral-900"
+      >
+        <div className="flex items-start justify-between gap-2">
+          <h3 className="text-xl font-semibold text-white group-hover:text-blue-400">
+            {project.name}
+          </h3>
+          <ArrowTopRightOnSquareIcon className="h-5 w-5 shrink-0 text-neutral-400 transition-colors group-hover:text-blue-400" />
+        </div>
+        <p className="mt-3 text-sm leading-relaxed text-neutral-400">
+          {project.description}
+        </p>
+      </a>
     </li>
   );
 }
