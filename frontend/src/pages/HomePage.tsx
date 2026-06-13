@@ -4,10 +4,8 @@ import { intro } from "../data/site-content";
 
 export default function HomePage() {
   return (
-    <section className="parallax-hero relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center px-6 text-center">
-      <div className="absolute inset-0 bg-black/60" aria-hidden />
-
-      <div className="relative z-10 flex flex-col items-center">
+    <section className="relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center px-6 text-center">
+      <div className="relative flex flex-col items-center">
         <div className="fade-in">
           <TypeAnimation
             sequence={[intro.greeting, 2000]}

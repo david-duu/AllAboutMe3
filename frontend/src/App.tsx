@@ -8,10 +8,12 @@ import ContactPage from "./pages/ContactPage";
 
 export default function App() {
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen">
+      <div className="parallax-bg" aria-hidden />
+      <div className="parallax-overlay" aria-hidden />
       <ScrollToTop />
       <Header />
-      <main className="pt-16">
+      <main className="relative pt-16">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
