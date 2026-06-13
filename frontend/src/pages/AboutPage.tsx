@@ -78,11 +78,11 @@ export default function AboutPage() {
                     : "See What Classes I've Taken!"}
                 </button>
                 {showCourses && (
-                  <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+                  <ul className="mt-4 flex flex-wrap gap-2">
                     {courses.map((course) => (
                       <li
                         key={course}
-                        className="rounded-md bg-neutral-900 px-3 py-2 text-sm text-neutral-300"
+                        className="rounded-full border border-neutral-700 bg-neutral-900 px-4 py-1.5 text-sm text-neutral-200"
                       >
                         {course}
                       </li>
